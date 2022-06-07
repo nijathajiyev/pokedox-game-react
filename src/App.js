@@ -47,7 +47,7 @@ class App extends Component {
     return (
       <div className="App">
         <br />
-        <Pokemon data={this.state.team1} win={team1Point > team2Point} />
+        <Pokemon data={this.state.team1} />
         <br />
         {this.state.winner && <h5>Total Experience: {team1Point}</h5>}
         <br />
@@ -68,7 +68,7 @@ class App extends Component {
         <br />
         {this.state.winner && <h5>Total Experience: {team2Point}</h5>}
 
-        <Pokemon data={this.state.team2} win={team2Point > team1Point} />
+        <Pokemon data={this.state.team2} />
       </div>
     );
   }
