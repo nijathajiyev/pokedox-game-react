@@ -1,0 +1,17 @@
+.card_class{
+    border-radius: 25px !important;
+    display: flex;
+    width: 15rem;
+    margin: 15px;
+    background-color: #eceff1 !important;
+    box-shadow: 7px 10px 12px -5px rgb(0 0 0 / 56%);
+}
+
+.card_pokemon{
+    margin-top: 15px;
+    color: #1600ff;
+}
+
+.card_img:hover{
+    transform: scale(2);
+}
