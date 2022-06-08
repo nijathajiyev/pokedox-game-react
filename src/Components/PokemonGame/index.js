@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { Pokemon } from "../Pokemon";
 import data from "../Constant/data.json";
+import PokemonStyle from "./pokemon.module.css";
 
 class PokemonGame extends Component {
   constructor(props) {
@@ -51,7 +52,13 @@ class PokemonGame extends Component {
         {this.state.winner && <h5>Total Experience: {team1Point}</h5>}
         <br />
         {this.state.winner && (
-          <h1>{team1Point > team2Point ? "Win" : "Lost"}</h1>
+          <h1>
+            {team1Point > team2Point ? (
+              <h1 className={`${PokemonStyle.win_game}`}>Win</h1>
+            ) : (
+              <h1 className={`${PokemonStyle.lost_game}`}>Lost</h1>
+            )}
+          </h1>
         )}
 
         {this.state.winner ? "" : <h1>Pokedox Game</h1>}
@@ -62,7 +69,13 @@ class PokemonGame extends Component {
         <br />
         <br />
         {this.state.winner && (
-          <h1>{team1Point < team2Point ? "Win" : "Lost"}</h1>
+          <h1>
+            {team1Point < team2Point ? (
+              <h1 className={`${PokemonStyle.win_game}`}>Win</h1>
+            ) : (
+              <h1 className={`${PokemonStyle.lost_game}`}>Lost</h1>
+            )}
+          </h1>
         )}
         <br />
         {this.state.winner && <h5>Total Experience: {team2Point}</h5>}
