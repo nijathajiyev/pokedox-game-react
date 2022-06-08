@@ -10,7 +10,9 @@ export class Card extends Component {
         <div className="card-body">
           <img
             className={`${CardStyle.card_img}`}
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
+            src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${
+              id < 10 ? "00" + id : id > 10 && id < 100 ? "0" + id : id
+            }.png`}
           />
           <p>Type: {type}</p>
           <p>EPX: {base_experience}</p>
